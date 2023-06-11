@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 class Move < ApplicationRecord
-    validates :name, length: { less_than: 255 }, uniqueness: { message: "'%{value}' is already in use" }
+    validates :name, length: { maximum: 255 }, uniqueness: { message: "'%{value}' is already in use" }
 
     has_many :poke_moves
     has_many :pokemon, through: :poke_moves

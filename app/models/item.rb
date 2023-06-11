@@ -13,7 +13,7 @@
 #
 class Item < ApplicationRecord
   validates :happiness, :image_url, presence: true
-  validates :name, length: { less_than: 255 }
+  validates :name, length: { maximum: 255 }
   validates :price, numericality: { greater_than_or_equal: 0 }
   
   belongs_to :pokemon
