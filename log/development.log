@@ -1,0 +1,2 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "pokedex_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "pokedex_test" ENCODING = 'unicode'[0m
