@@ -40,10 +40,10 @@ const PokemonDetail = () => {
           <h2>Information</h2>
           <ul>
             <li>
-              <b>No</b> {pokemon.no}
+              <b>No</b> {pokemon.number}
             </li>
             <li>
-              <b>Type</b> {pokemon.type}
+              <b>Type</b> {pokemon.pokeType}
             </li>
             <li>
               <b>Attack</b> {pokemon.attack}
