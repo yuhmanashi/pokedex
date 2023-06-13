@@ -11,6 +11,6 @@
 json.array! @items, :id, :happiness, :image_url, :name, :price, :pokemon_id
 
 # json.array! @items do |item|
-#     next if item.pokemon_id != @items.pokemon_id
+#     next if item.pokemon_id != @id
 #     json.extract! item, :id, :happiness, :image_url, :name, :price, :pokemon_id
 # end

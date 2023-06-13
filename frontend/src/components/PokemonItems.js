@@ -17,6 +17,8 @@ const PokemonItems = ({ pokemon, setEditItemId }) => {
     return null;
   }
 
+  console.log(pokemon)
+
   return items.map((item) => (
     <tr key={item.id}>
       <td>
