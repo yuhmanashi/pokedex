@@ -15,8 +15,6 @@
 #     json.extract! item, :id, :happiness, :image_url, :name, :price, :pokemon_id
 # end
 
-@items.each do |item|
-    json.set! item.id do
-        json.partial! 'item', item: item
-    end
+json.array! @items.each do |item|
+    json.partial! 'api/items/item', item: item
 end
