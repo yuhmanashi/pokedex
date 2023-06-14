@@ -9,4 +9,5 @@
 #   },
 # ]
 
-json.extract! @item, :id, :happiness, :image_url, :name, :price, :pokemon_id
+# json.extract! @item, :id, :happiness, :image_url, :name, :price, :pokemon_id
+json.partial! 'item', item: item

@@ -7,7 +7,13 @@ class Api::ItemsController < ApplicationController
     end
 
     def create
+        @item = Item.new(item_params)
 
+        if @item.save
+            render :show
+        else
+            render json: @item.errors.messages, status: :unprocessable_entity
+        end
     end
 
     def update
@@ -15,6 +21,17 @@ class Api::ItemsController < ApplicationController
     end
 
     def destroy
+        @item = Item.find(params[:id])
+        
+        if @item
+            @item.destroy
+            render json: params[:id]
+        end
+    end
 
+    private
+
+    def item_params
+        params.require(:item).permit(:happiness, :price, :name)
     end
 end

@@ -8,9 +8,15 @@
 #     "pokemonId": 1
 #   },
 # ]
-json.array! @items, :id, :happiness, :image_url, :name, :price, :pokemon_id
+# json.array! @items, :id, :happiness, :image_url, :name, :price, :pokemon_id
 
 # json.array! @items do |item|
 #     next if item.pokemon_id != @id
 #     json.extract! item, :id, :happiness, :image_url, :name, :price, :pokemon_id
 # end
+
+@items.each do |item|
+    json.set! item.id do
+        json.partial! 'item', item: item
+    end
+end
