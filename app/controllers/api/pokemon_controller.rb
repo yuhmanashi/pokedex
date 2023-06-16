@@ -12,4 +12,13 @@ class Api::PokemonController < ApplicationController
         @pokemon = Pokemon.find(params[:id])
         render :show
     end
+
+    def create
+
+    end
+
+
+    def update
+        
+    end
 end
